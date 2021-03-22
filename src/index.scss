@@ -1,0 +1,108 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+ul li {
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: 400;
+}
+
+/*--------------------*/
+
+.row {
+	display: flex;
+	margin-bottom: 25px;
+	padding: 0 10px;
+}
+
+.block {
+	flex: 1;
+	height: 300px;
+	background: rgb(228, 114, 8);
+	margin-right: 25px;
+	border-radius: 15px;
+	transition: all .5s;
+	transform: translateX(0px);
+	opacity: 1;
+}
+@keyframes fromRight {
+	0% {
+	  opacity: 0;
+	  transform: translateX(200px);
+	}
+  
+	100% {
+	  opacity: 1;
+	  transform: translateX(0px);
+	}
+  }
+  
+  @keyframes fromLeft {
+	0% {
+	  opacity: 0;
+	  transform: translateX(-200px);
+	}
+  
+	100% {
+	  opacity: 1;
+	  transform: translateX(0px);
+	}
+  }
+  
+  .block-right {
+	animation: fromRight .5s ease-out;
+  }
+  
+  .block-left {
+	animation: fromLeft .5s ease-out;
+  }
+.animate .block-right {
+	transform: translateX(200px);
+	opacity: 0;
+  }
+  
+  .animate .block-left {
+	transform: translateX(-200px);
+	opacity: 0;
+  }
