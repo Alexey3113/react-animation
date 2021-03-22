@@ -24,7 +24,7 @@ export const DataList = () => {
                     {posts.map((post, i) => {
                         const classnames = i % 2 === 0 ? "block block-left" : "block block-right"
                         return (
-                            <div key={i} class="row">
+                            <div key={i} className="row">
                                 <div className={classnames}>{post.title}</div>
                             </div>
                             
