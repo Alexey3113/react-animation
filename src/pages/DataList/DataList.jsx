@@ -30,6 +30,7 @@ export const DataList = () => {
                             
                         )
                     })}
+                   
                 </div>
                 {/* <div className=""></div> */}
                 

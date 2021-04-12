@@ -1,5 +1,5 @@
 import React from "react";
-import {useHistory } from "react-router";
+import {useHistory} from "react-router-dom";
 import {useDispatch} from "react-redux"
 
 import "./style.scss";
@@ -8,8 +8,10 @@ import { allPaths as paths } from "../../constants";
 import { setAnimation } from "../../redux/animation/actions";
 
 export const Navbar = () => {
-    const history = useHistory();
+
+    const history = useHistory()
     const dispatch = useDispatch()
+
 
 
     const handleClickLink = (path) => (event) => {
@@ -18,7 +20,7 @@ export const Navbar = () => {
 
         const animateTimeout = setTimeout(() => {
             dispatch(setAnimation(false))
-            history.push(path);
+            history.push(path)
             clearTimeout(animateTimeout);
         }, 700);
 
